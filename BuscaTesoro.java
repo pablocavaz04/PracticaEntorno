@@ -64,6 +64,7 @@ public class BuscaTesoro {
     System.out.print("Coordenada y: ");
     y = Integer.parseInt(System.console().readLine());
     
+
     // mira lo que hay en las coordenadas indicadas por el usuario
     switch(cuadrante[x][y]) {
         case VACIO:
@@ -81,6 +82,33 @@ public class BuscaTesoro {
         }
         } while (!salir);
         
+
+
+        // pinta el cuadrante
+    for(y = 3; y >= 0; y--) {
+        System.out.print(y + " ");
+        for(x = 0; x < 5; x++) {
+        switch(cuadrante[x][y]) {
+        case VACIO:
+        
+        c = " ";
+        break;
+        case MINA:
+        c = "* ";
+        break;
+        case TESORO:
+        c = "€ ";
+        break;
+        case INTENTO:
+        c = "X ";
+        break;
+        default:
+        }
+        System.out.print(c);
+        }
+        System.out.println();
+        }
+        System.out.println(" ----------\n 0 1 2 3 4\n");
 
     }
 }
