@@ -18,6 +18,25 @@ public class BuscaTesoro {
     int x;
     int y;
     int[][] cuadrante = new int[5][4];
-
+    
+    
+    // inicializa el array
+    for(x = 0; x < 4; x++) {
+    for(y = 0; y < 3; y++) {
+    cuadrante[x][y] = VACIO;
+    }
+    }
+    // coloca la mina
+    int minaX = (int)(Math.random() * 5);
+    int minaY = (int)(Math.random() * 4);
+    cuadrante[minaX][minaY] = MINA;
+    // coloca el tesoro
+    int tesoroX;
+    int tesoroY;
+    do {
+    tesoroX = (int)(Math.random() * 5);
+    tesoroY = (int)(Math.random() * 4);
+    } while ((minaX == tesoroX) && (minaY == tesoroY));
+    cuadrante[tesoroX][tesoroY] = TESORO;
     }
 }
