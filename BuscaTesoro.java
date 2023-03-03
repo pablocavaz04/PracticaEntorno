@@ -39,10 +39,31 @@ public class BuscaTesoro {
     } while ((minaX == tesoroX) && (minaY == tesoroY));
     cuadrante[tesoroX][tesoroY] = TESORO;
 
-        // pide las coordenadas
+    // juego
+    System.out.println("¡BUSCA EL TESORO!");
+    boolean salir = false;
+    String c = "";
+    do {
+    // pinta el cuadrante
+    for(y = 3; y >= 0; y--) {
+    System.out.print(y + "|");
+    for(x = 0; x < 5; x++) {
+    if (cuadrante[x][y] == INTENTO) {
+    System.out.print("X ");
+    } else {
+    System.out.print(" ");
+    }
+    }
+    System.out.println();
+    }
+    System.out.println(" ----------\n 0 1 2 3 4\n");
+
+    // pide las coordenadas
     System.out.print("Coordenada x: ");
     x = Integer.parseInt(System.console().readLine());
     System.out.print("Coordenada y: ");
     y = Integer.parseInt(System.console().readLine());
+    
+
     }
 }
