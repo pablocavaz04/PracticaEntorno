@@ -38,5 +38,11 @@ public class BuscaTesoro {
     tesoroY = (int)(Math.random() * 4);
     } while ((minaX == tesoroX) && (minaY == tesoroY));
     cuadrante[tesoroX][tesoroY] = TESORO;
+
+        // pide las coordenadas
+    System.out.print("Coordenada x: ");
+    x = Integer.parseInt(System.console().readLine());
+    System.out.print("Coordenada y: ");
+    y = Integer.parseInt(System.console().readLine());
     }
 }
