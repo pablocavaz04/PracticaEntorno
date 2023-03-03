@@ -64,6 +64,23 @@ public class BuscaTesoro {
     System.out.print("Coordenada y: ");
     y = Integer.parseInt(System.console().readLine());
     
+    // mira lo que hay en las coordenadas indicadas por el usuario
+    switch(cuadrante[x][y]) {
+        case VACIO:
+        cuadrante[x][y] = INTENTO;
+        break;
+        case MINA:
+        System.out.println("Lo siento, has perdido.");
+        salir = true;
+        break;
+        case TESORO:
+        System.out.println("¡Enhorabuena! ¡Has encontrado el tesoro!");
+        salir = true;
+        break;
+        default:
+        }
+        } while (!salir);
+        
 
     }
 }
